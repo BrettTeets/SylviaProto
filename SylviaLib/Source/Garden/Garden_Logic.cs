@@ -54,11 +54,12 @@ public partial class Garden{
         return plants;
     }
 
-    public string[] GetAllPlantsInPlot(Guid plot_id){
+    public string[] GetAllPlantsInPlot(string name){
+        Guid id = Plots.GetGuidFromName(name) ?? throw new Exception();
         List<string> plants = new();
 
         foreach(Plant p in Plants){
-            if(p.Plot_ID == plot_id){
+            if(p.Plot_ID == id){
                 plants.Add(p.ToString());
             }
         }

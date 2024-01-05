@@ -7,6 +7,6 @@ public partial class Plant{
 
     public override string ToString()
     {
-        return $"{Name} in {Plot_ID}. ";
+        return $"Plant: {Name}. ";
     }
 }
