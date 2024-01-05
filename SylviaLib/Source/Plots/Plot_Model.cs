@@ -5,17 +5,17 @@ namespace SylviaLib;
 public partial class Plot{
     public Plot(Plot_Data data){
         Name = data.Name;
-        ID = data.ID;
+        ID = Guid.Parse(data.ID);
     }
 
-    string Name;
-    string ID;
+    internal string Name;
+    internal Guid ID;
 
 
     public Plot_Data Save(){
         return new(){
             Name = Name,
-            ID = ID,
+            ID = ID.ToString(),
         };
     } 
 }

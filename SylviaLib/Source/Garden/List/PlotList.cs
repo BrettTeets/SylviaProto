@@ -15,7 +15,15 @@ public class PlotList : List<Plot>{
         int c = 0;
         foreach(var element in this){
             output[c] = element.Save();
+            c++;
         }
         return output;
+    }
+
+    public Guid? GetGuidFromName(string name){
+        foreach(Plot element in this){
+            if(element.Name == name) return element.ID;
+        }
+        return null;
     }
 }

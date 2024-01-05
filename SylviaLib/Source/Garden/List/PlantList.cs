@@ -15,6 +15,7 @@ public class PlantList : List<Plant>{
         int c = 0;
         foreach(var element in this){
             output[c] = element.Save();
+            c++;
         }
         return output;
     }
