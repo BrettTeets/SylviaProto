@@ -9,7 +9,7 @@ public class PlantList : List<Plant>{
         }
         return list;
     }
-    
+
     public Plant_Data[] Save(){
         Plant_Data[] output = new Plant_Data[this.Count];
         int c = 0;
