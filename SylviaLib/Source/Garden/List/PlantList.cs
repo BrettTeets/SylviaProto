@@ -1,6 +1,6 @@
 namespace SylviaLib;
 
-public class PlantList : List<Plant>{
+public class PlantList : List<Plant_Model>{
 
     public static PlantList Build(Plant_Data[] data){
         PlantList list = new();

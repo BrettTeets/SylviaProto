@@ -46,7 +46,7 @@ public partial class Garden{
         string[] plants = new string[Plants.Count];
 
         int c = 0;
-        foreach(Plant p in Plants){
+        foreach(Plant_Model p in Plants){
             plants[c] = p.ToString();
             c++;
         }
@@ -58,7 +58,7 @@ public partial class Garden{
         Guid id = Plots.GetGuidFromName(name) ?? throw new Exception();
         List<string> plants = new();
 
-        foreach(Plant p in Plants){
+        foreach(Plant_Model p in Plants){
             if(p.Plot_ID == id){
                 plants.Add(p.ToString());
             }
